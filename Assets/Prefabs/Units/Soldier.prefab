@@ -5271,7 +5271,7 @@ MonoBehaviour:
   weaponRange: 0
   state: 0
   faction: {fileID: 0}
-  selectionVisual: {fileID: 0}
+  selectionVisual: {fileID: 657117337993097984}
 --- !u!114 &-4134747315748055507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6309,6 +6309,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0823cd073e224ec4d88e6c67b4dce36c, type: 3}
+--- !u!1 &657117337993097984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3254981685709282529, guid: 0823cd073e224ec4d88e6c67b4dce36c, type: 3}
+  m_PrefabInstance: {fileID: 2608296823303876577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5710556149234592232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7713945620469401097, guid: 0823cd073e224ec4d88e6c67b4dce36c, type: 3}
