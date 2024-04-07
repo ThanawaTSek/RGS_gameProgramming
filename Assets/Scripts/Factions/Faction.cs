@@ -31,6 +31,10 @@ public class Faction : MonoBehaviour
     [SerializeField] private List<Unit> aliveUnits = new List<Unit>();
     public List<Unit> AliveUnits { get { return aliveUnits; } }
     
+    //ตัวแปร List ของ Building
+    [SerializeField] private List<Building> aliveBuildings = new List<Building>();
+    public List<Building> AliveBuildings { get { return aliveBuildings; } }
+    
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +47,11 @@ public class Faction : MonoBehaviour
     {
         
     }
+    
+    public bool IsMyBuilding(Building b)
+    {
+        return aliveBuildings.Contains(b);
+    } //เช็ค Building ของตัวเอง
     
     public bool CheckUnitCost(Unit unit)
     {
