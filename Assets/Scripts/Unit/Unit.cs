@@ -71,7 +71,12 @@ public class Unit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        switch (state)
+        {
+            case UnitState.Move:
+                MoveUpdate();
+                break;
+        } //เช็ค MoveUpdate() ในลูป
     }
     
     public void ToggleSelectionVisual(bool flag)
@@ -79,5 +84,35 @@ public class Unit : MonoBehaviour
         if (selectionVisual != null)
             selectionVisual.SetActive(flag);
     } //ปิดเปิดวงแหวน
+    
+    public void SetState(UnitState toState)
+    {
+        state = toState;
+
+        if (state == UnitState.Idle)
+        {
+            navAgent.isStopped = true;
+            navAgent.ResetPath();
+        }
+    }
+    
+    public void MoveToPosition(Vector3 dest)
+    {
+        if (navAgent != null)
+        {
+            navAgent.SetDestination(dest);
+            navAgent.isStopped = false;
+        }
+
+        SetState(UnitState.Move); 
+    }
+    
+    private void MoveUpdate()
+    {
+        float distance = Vector3.Distance(transform.position, navAgent.destination);
+
+        if (distance <= 1f)
+            SetState(UnitState.Idle);
+    }
     
 }
