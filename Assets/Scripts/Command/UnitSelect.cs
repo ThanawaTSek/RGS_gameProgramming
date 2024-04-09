@@ -102,6 +102,7 @@ public class UnitSelect : MonoBehaviour
         
         //Clear UI
         InfoManager.instance.ClearAllInfo();
+        ActionManager.instance.ClearAllInfo();
     }
     
     private void ShowUnit(Unit u)
