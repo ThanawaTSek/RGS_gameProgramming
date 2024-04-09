@@ -1425,7 +1425,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 265334675}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641597808}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &265334675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2147,7 +2159,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 541817692}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641597808}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &541817692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3299,7 +3323,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 715248507}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641597808}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &715248507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4348,7 +4384,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1144402227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641597808}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1144402227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4397,7 +4445,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 18498519589069750, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 185793033815685554, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
       propertyPath: m_Layer
@@ -4523,6 +4571,18 @@ PrefabInstance:
       propertyPath: faction
       value: 
       objectReference: {fileID: 704866756}
+    - target: {fileID: 5764446571386553882, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
+      propertyPath: isFunctional
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764446571386553882, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
+      propertyPath: unitPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6967110742575139309, guid: fc4db5e2021947a41a9282f32e89b0b0, type: 3}
+    - target: {fileID: 5764446571386553882, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
+      propertyPath: unitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 186328, guid: ecb4952fdf39e3e4695d76e2fffc8501, type: 3}
     - target: {fileID: 6011566928667402505, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -5392,7 +5452,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1318108000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641597808}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1318108000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6056,7 +6128,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1543865778}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641597808}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1543865778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6296,7 +6380,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1607954508}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641597808}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1607954508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6567,7 +6663,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1690860461}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641597808}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1690860461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7157,7 +7265,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1814449262}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641597808}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1814449262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7658,7 +7778,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1949998211}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641597808}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateUnitButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1949998211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8620,7 +8752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2286760804565218464, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.63
+      value: -14.55
       objectReference: {fileID: 0}
     - target: {fileID: 2286760804565218464, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8808,7 +8940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4488500010328323881, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4488500010328323881, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8861,6 +8993,18 @@ PrefabInstance:
     - target: {fileID: 4793215115956427173, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000661052702375250, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000661052702375250, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000661052702375250, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5198922795590082890, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
       propertyPath: m_Layer
@@ -8984,7 +9128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6742111351673286791, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.88
+      value: -11.95
       objectReference: {fileID: 0}
     - target: {fileID: 6799725001296029229, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
       propertyPath: m_Layer
@@ -9112,7 +9256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8590560346915884384, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8714297376230774097, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
       propertyPath: m_LocalPosition.x

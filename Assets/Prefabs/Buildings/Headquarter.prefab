@@ -182,18 +182,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   structureName: 
   structurePic: {fileID: 0}
-  curHP: 0
-  maxHP: 0
+  curHP: 100
+  maxHP: 100
   faction: {fileID: 0}
   selectionVisual: {fileID: 5277145273287875071}
   spawnPoint: {fileID: 7544723589562660997}
   rallyPoint: {fileID: 7659639567984851974}
   unitPrefabs:
   - {fileID: 186328, guid: ecb4952fdf39e3e4695d76e2fffc8501, type: 3}
+  - {fileID: 6967110742575139309, guid: fc4db5e2021947a41a9282f32e89b0b0, type: 3}
   recruitList: []
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
+  isFunctional: 0
 --- !u!65 &2521198935041437087
 BoxCollider:
   m_ObjectHideFlags: 0
