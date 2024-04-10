@@ -108,6 +108,9 @@ public class UnitSelect : MonoBehaviour
     private void ShowUnit(Unit u)
     {
         InfoManager.instance.ShowAllInfo(u);
+
+        if (u.IsBuilder)
+            ActionManager.instance.ShowBuilderMode(u);
     } // Clear และการโชว์ Stat ใน UI
     
     private void ShowBuilding(Building b)
