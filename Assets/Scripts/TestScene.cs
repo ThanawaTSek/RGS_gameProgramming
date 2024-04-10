@@ -29,12 +29,4 @@ public class TestScene : MonoBehaviour
             units[i].State = UnitState.Attack;
         }
     }
-
-    public void SetBuild()
-    {
-        for (int i = 0; i < units.Length; i++)
-        {
-            units[i].State = UnitState.Build;
-        }
-    }
 }

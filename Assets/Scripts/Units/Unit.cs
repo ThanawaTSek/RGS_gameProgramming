@@ -8,7 +8,8 @@ public enum UnitState
     Idle,
     Move,
     Attack,
-    Build,
+    MoveToBuild,
+    BuildProgress,
     Die
 }
 
