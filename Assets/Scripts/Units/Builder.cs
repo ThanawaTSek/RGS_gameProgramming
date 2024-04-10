@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Builder : MonoBehaviour
 {
@@ -37,6 +38,15 @@ public class Builder : MonoBehaviour
         if (toBuild) // if this unit is to build something
         {
             GhostBuildingFollowsMouse();
+            
+            // if mouse over UI
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (EventSystem.current.IsPointerOverGameObject())
+                    return;
+                
+                CheckClickOnGround();
+            }
 
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
                 CancelToBuild();
@@ -112,8 +122,7 @@ public class Builder : MonoBehaviour
         }
 
         //We use prefab position.y when instantiating.
-        GameObject buildingObj = Instantiate(newBuilding,
-            new Vector3(pos.x, newBuilding.transform.position.y, pos.z),
+        GameObject buildingObj = Instantiate(newBuilding, new Vector3(pos.x, newBuilding.transform.position.y, pos.z),
             Quaternion.identity);
 
         newBuilding = null; //Clear 
@@ -124,7 +133,6 @@ public class Builder : MonoBehaviour
         buildingObj.transform.position = new Vector3(buildingObj.transform.position.x, 
             buildingObj.transform.position.y - building.IntoTheGround, 
             buildingObj.transform.position.z);
-
         //Set building's parent game object
         buildingObj.transform.parent = unit.Faction.BuildingsParent.transform;
 
@@ -148,7 +156,7 @@ public class Builder : MonoBehaviour
 
         //order builders to build together
         StartConstruction(inProgressBuilding);
-    } // สร้าง Building on Ground
+    }
     
     private void CheckClickOnGround()
     {
@@ -159,10 +167,11 @@ public class Builder : MonoBehaviour
         {
             bool canBuild = ghostBuilding.GetComponent<FindBuildingSite>().CanBuild;
             //Debug.Log(hit.collider.tag);
-            if ((hit.collider.tag == "Ground") && canBuild){
+            if ((hit.collider.tag == "Ground") && canBuild)
+            {
                 //Debug.Log("Click Ground to Build");
                 CreateBuildingSite(hit.point); //Create building site with 1 HP
             }
         }
-    } // เช็คการคลิกซ้ายบน Ground เพื่อสั่งสร้าง Building
+    }
 }
