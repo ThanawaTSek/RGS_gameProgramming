@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2377417470332611255}
   - component: {fileID: 4866981047752347413}
   - component: {fileID: 3260072354525787018}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_Lantern_Attachment_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,9 +140,9 @@ GameObject:
   - component: {fileID: 4822458473812873234}
   - component: {fileID: 2521198935041437087}
   - component: {fileID: 7429780363929320719}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Headquarter_Ghost
-  m_TagString: Untagged
+  m_TagString: GhostBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2765755877924584905}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Components
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 7599864182115206001}
   - component: {fileID: 1572962225645137790}
   - component: {fileID: 6367655370131295779}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_Lantern_Attachment_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 6877042344110620381}
   - component: {fileID: 1808564800271668304}
   - component: {fileID: 6311030014922074853}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_Lantern_Attachment_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 6689390979768763189}
   - component: {fileID: 9083891067343942030}
   - component: {fileID: 6966591985630114251}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Room_04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 7567750361143790249}
   - component: {fileID: 7426826414446183550}
   - component: {fileID: 4085957011178300413}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Env_Vines_Wall_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 7258596985557367101}
   - component: {fileID: 5357812279364777201}
   - component: {fileID: 3314040602029458701}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Room_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -835,7 +835,7 @@ GameObject:
   - component: {fileID: 7667424853266730636}
   - component: {fileID: 522185709732288280}
   - component: {fileID: 5508434102909016013}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_FlowerHanging_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 8425136428660105566}
   - component: {fileID: 1597006740596802902}
   - component: {fileID: 4689079070586198591}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_FlowerHanging_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1047,7 +1047,7 @@ GameObject:
   - component: {fileID: 5439992102438806237}
   - component: {fileID: 1871648127485739472}
   - component: {fileID: 707044869165644577}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_Shanty_BuildingAttachment_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1153,7 @@ GameObject:
   - component: {fileID: 1402251331015005583}
   - component: {fileID: 8310319421443678690}
   - component: {fileID: 6955768479367831718}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_FlowerHanging_55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,7 +1259,7 @@ GameObject:
   - component: {fileID: 645184510291638674}
   - component: {fileID: 3338757654162288596}
   - component: {fileID: 3933736878371686256}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Room_05 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,7 +1365,7 @@ GameObject:
   - component: {fileID: 550409064616356052}
   - component: {fileID: 886348712290959252}
   - component: {fileID: 3680701078122327775}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_Shanty_BuildingAttachment_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1620,7 +1620,7 @@ GameObject:
   - component: {fileID: 1407069490270986510}
   - component: {fileID: 7391108165890553273}
   - component: {fileID: 3465205556129306885}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Tower_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1726,7 +1726,7 @@ GameObject:
   - component: {fileID: 8046729954390352407}
   - component: {fileID: 6662194516550128564}
   - component: {fileID: 6759144020084040216}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_FlowerHanging_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1832,7 +1832,7 @@ GameObject:
   - component: {fileID: 8577815001507980221}
   - component: {fileID: 1756483440428760368}
   - component: {fileID: 2566841462543496432}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Room_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1938,7 +1938,7 @@ GameObject:
   - component: {fileID: 5415407845485777341}
   - component: {fileID: 2590306680779986833}
   - component: {fileID: 5711925925684883697}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Front_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2044,7 +2044,7 @@ GameObject:
   - component: {fileID: 4468971584810407028}
   - component: {fileID: 4950613631354707801}
   - component: {fileID: 6685722467154450736}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_FlowerHanging_54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2150,7 +2150,7 @@ GameObject:
   - component: {fileID: 5123921925546097307}
   - component: {fileID: 1249199961543618246}
   - component: {fileID: 9503480042973088}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Room_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2256,7 +2256,7 @@ GameObject:
   - component: {fileID: 8552604651881681735}
   - component: {fileID: 6247438656406938407}
   - component: {fileID: 9099771918630080061}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Front_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2362,7 +2362,7 @@ GameObject:
   - component: {fileID: 228421662449817797}
   - component: {fileID: 1485506724619052646}
   - component: {fileID: 543142196354172343}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Room_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2469,7 +2469,7 @@ GameObject:
   - component: {fileID: 7434648719919530862}
   - component: {fileID: 5581926733521882394}
   - component: {fileID: 4547394702864790877}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_Lantern_Attachment_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2596,7 +2596,7 @@ GameObject:
   - component: {fileID: 1774843560209486093}
   - component: {fileID: 1724416917128073904}
   - component: {fileID: 3041179484108335506}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Env_Vines_Wall_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2679,7 +2679,7 @@ GameObject:
   - component: {fileID: 4959801462319539840}
   - component: {fileID: 4559446986733550467}
   - component: {fileID: 4811325836027006309}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Env_Vines_Wall_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2762,7 +2762,7 @@ GameObject:
   - component: {fileID: 606246058467606831}
   - component: {fileID: 3766271548328270184}
   - component: {fileID: 281427927626978399}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Env_Vines_Wall_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2846,7 +2846,7 @@ GameObject:
   - component: {fileID: 1629310341144990792}
   - component: {fileID: 6093699991164959144}
   - component: {fileID: 6382138952217302494}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Room_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2952,7 +2952,7 @@ GameObject:
   - component: {fileID: 1446315500229270701}
   - component: {fileID: 4969562088918645692}
   - component: {fileID: 5866124383611780223}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Prop_FlowerHanging_53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3058,7 +3058,7 @@ GameObject:
   - component: {fileID: 5245750005631405524}
   - component: {fileID: 5346024228594437805}
   - component: {fileID: 1139196498584802926}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Bld_Cuba_Hall_Tower_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

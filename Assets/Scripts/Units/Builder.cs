@@ -31,7 +31,16 @@ public class Builder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (unit.State == UnitState.Die)
+            return;
+
+        if (toBuild) // if this unit is to build something
+        {
+            GhostBuildingFollowsMouse();
+
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
+                CancelToBuild();
+        }
     }
     
     public void ToCreateNewBuilding(int i) //Start call from ActionManager UI Btns
@@ -55,4 +64,105 @@ public class Builder : MonoBehaviour
             showGhost = true;
         }
     } // สร้าง Ghost Building เมื่อกดปุ่ม
+    
+    private void GhostBuildingFollowsMouse()
+    {
+        if (showGhost)
+        {
+            Ray ray = CameraController.instance.Cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 1000, LayerMask.GetMask("Ground")))
+            {
+                if (ghostBuilding != null)
+                {
+                    ghostBuilding.transform.position = new Vector3(hit.point.x, 0, hit.point.z);
+                }
+            }
+        }
+    } // “Building Ghost” ขยับตามเมาส์
+    
+    private void CancelToBuild()
+    {
+        toBuild = false;
+        showGhost = false;
+
+        newBuilding = null;
+        Destroy(ghostBuilding);
+        ghostBuilding = null;
+        //Debug.Log("Cancel Building");
+    } // ยกเลิกสร้าง
+    
+    public void BuilderStartFixBuilding(GameObject target)
+    {
+        inProgressBuilding = target;        
+        unit.SetState(UnitState.MoveToBuild);
+    } // walk to paomai
+    private void StartConstruction(GameObject buildingObj)
+    {
+        BuilderStartFixBuilding(buildingObj);
+    }
+    
+    public void CreateBuildingSite(Vector3 pos) //Set a building site
+    {
+        if (ghostBuilding != null)
+        {
+            Destroy(ghostBuilding);
+            ghostBuilding = null;
+        }
+
+        //We use prefab position.y when instantiating.
+        GameObject buildingObj = Instantiate(newBuilding,
+            new Vector3(pos.x, newBuilding.transform.position.y, pos.z),
+            Quaternion.identity);
+
+        newBuilding = null; //Clear 
+
+        Building building = buildingObj.GetComponent<Building>();
+
+        //Set building to be underground
+        buildingObj.transform.position = new Vector3(buildingObj.transform.position.x, 
+            buildingObj.transform.position.y - building.IntoTheGround, 
+            buildingObj.transform.position.z);
+
+        //Set building's parent game object
+        buildingObj.transform.parent = unit.Faction.BuildingsParent.transform;
+
+        inProgressBuilding = buildingObj; //set a new clone building object to be a building in Unit's mind
+        unit.Faction.AliveBuildings.Add(building);
+
+        building.Faction = unit.Faction; //set a building's faction to be belong to this player
+        building.IsFunctional = false;
+        building.CurHP = 1;
+
+        unit.Faction.DeductBuildingCost(building);
+
+        toBuild = false; //Disable flag at the builder
+        showGhost = false; //Disable to show ghost building
+
+        if (unit.Faction == GameManager.instance.MyFaction)
+        {
+            MainUI.instance.UpdateAllResource(unit.Faction);
+        }
+        //Debug.Log("Building site created.");
+
+        //order builders to build together
+        StartConstruction(inProgressBuilding);
+    } // สร้าง Building on Ground
+    
+    private void CheckClickOnGround()
+    {
+        Ray ray = CameraController.instance.Cam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            bool canBuild = ghostBuilding.GetComponent<FindBuildingSite>().CanBuild;
+            //Debug.Log(hit.collider.tag);
+            if ((hit.collider.tag == "Ground") && canBuild){
+                //Debug.Log("Click Ground to Build");
+                CreateBuildingSite(hit.point); //Create building site with 1 HP
+            }
+        }
+    } // เช็คการคลิกซ้ายบน Ground เพื่อสั่งสร้าง Building
 }
