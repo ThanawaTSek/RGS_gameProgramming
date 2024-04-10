@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   structureName: 
-  structurePic: {fileID: 0}
+  structurePic: {fileID: 21300000, guid: 37cd4931ffcf85142afc520a6af7e63c, type: 3}
   curHP: 0
   maxHP: 0
   faction: {fileID: 0}
@@ -1462,7 +1462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4389514745451544739, guid: cab67f8c28a63f247af6b4996bb508bb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8473284667925347050, guid: cab67f8c28a63f247af6b4996bb508bb, type: 3}
       propertyPath: m_LocalScale.x
