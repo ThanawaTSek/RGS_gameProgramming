@@ -4507,10 +4507,10 @@ MonoBehaviour:
   showGhost: 0
   buildingList:
   - {fileID: 591810731252806362, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
-  - {fileID: 5791451543826117519, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
+  - {fileID: 5750916137259845058, guid: e075df22d18e36f4581562c5d1d0d507, type: 3}
   ghostBuildingList:
   - {fileID: 591810731252806362, guid: 9a9d40acb58e97e46b3fdfedaf453330, type: 3}
-  - {fileID: 5791451543826117519, guid: fd59ce66a74fe9c43949237f01ecb495, type: 3}
+  - {fileID: 5750916137259845058, guid: 9dafc703892fe41438593721f887aaf2, type: 3}
   newBuilding: {fileID: 0}
   ghostBuilding: {fileID: 0}
   inProgressBuilding: {fileID: 0}
