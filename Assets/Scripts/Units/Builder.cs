@@ -39,9 +39,9 @@ public class Builder : MonoBehaviour
         {
             GhostBuildingFollowsMouse();
             
-            // if mouse over UI
             if (Input.GetMouseButtonDown(0))
             {
+                // if mouse over UI
                 if (EventSystem.current.IsPointerOverGameObject())
                     return;
                 
@@ -162,7 +162,7 @@ public class Builder : MonoBehaviour
     {
         Ray ray = CameraController.instance.Cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-
+        
         if (Physics.Raycast(ray, out hit))
         {
             bool canBuild = ghostBuilding.GetComponent<FindBuildingSite>().CanBuild;

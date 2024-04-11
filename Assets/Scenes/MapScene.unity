@@ -4616,12 +4616,20 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5764446571386553882, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
+      propertyPath: isHQ
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764446571386553882, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
       propertyPath: faction
       value: 
       objectReference: {fileID: 704866756}
     - target: {fileID: 5764446571386553882, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
       propertyPath: isFunctional
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764446571386553882, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
+      propertyPath: recruitList.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5764446571386553882, guid: 8f94c3a35c0379e49855e22249fb2115, type: 3}
       propertyPath: unitPrefabs.Array.data[0]
