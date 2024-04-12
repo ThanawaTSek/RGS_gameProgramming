@@ -144,4 +144,12 @@ public class Unit : MonoBehaviour
             SetState(UnitState.Idle);
     }
     
+    public void LookAt(Vector3 pos)
+    {
+        Vector3 dir = (pos - transform.position).normalized;
+        float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
+        
+        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+    } //หันหน้าเข้าหาจุด Vector3
+    
 }
