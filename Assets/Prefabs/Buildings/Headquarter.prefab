@@ -196,6 +196,7 @@ MonoBehaviour:
   unitPrefabs:
   - {fileID: 186328, guid: ecb4952fdf39e3e4695d76e2fffc8501, type: 3}
   - {fileID: 6967110742575139309, guid: fc4db5e2021947a41a9282f32e89b0b0, type: 3}
+  - {fileID: 186328, guid: 19d57355dc3797349be82b56422ea936, type: 3}
   recruitList: []
   unitTimer: 0
   curUnitProgress: 0
