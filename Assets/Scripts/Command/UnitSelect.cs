@@ -15,6 +15,9 @@ public class UnitSelect : MonoBehaviour
     [SerializeField]
     private Building curBuilding; //current selected single building
     public Building CurBuilding { get { return curBuilding; } }
+    
+    [SerializeField]
+    private ResourceSource curResource; //current selected resource
 
     private Camera cam;
     private Faction faction;
@@ -82,6 +85,9 @@ public class UnitSelect : MonoBehaviour
                 case "Building":
                     BuildingSelect(hit);
                     break;
+                case "Resource":
+                    ResourceSelect(hit);
+                    break;
             }
         }
     } // TrySelect ในการคลิกเลือก Unit
@@ -92,7 +98,10 @@ public class UnitSelect : MonoBehaviour
             curUnit.ToggleSelectionVisual(false);
         if (curBuilding != null)
             curBuilding.ToggleSelectionVisual(false);
-    } // Clear การเลือกครั้งที่แล้ว
+        if (curResource != null)
+            curResource.ToggleSelectionVisual(false);
+        
+    } // กดที่พื้นแล้ว Clear Unit Select
     
     private void ClearEverything()
     {
@@ -130,4 +139,21 @@ public class UnitSelect : MonoBehaviour
             ShowBuilding(curBuilding);//Show building info
         }
     }
+    
+    private void ShowResource()
+    {
+        InfoManager.instance.ShowAllInfo(curResource);//Show resource info in Info Panel
+
+    } //ShowResource
+    
+    private void ResourceSelect(RaycastHit hit)
+    {
+        curResource = hit.collider.GetComponent<ResourceSource>();
+        if (curResource == null)
+            return;
+
+        curResource.ToggleSelectionVisual(true);
+        ShowResource();//Show resource info
+    } // ResourceSelect
+
 }
