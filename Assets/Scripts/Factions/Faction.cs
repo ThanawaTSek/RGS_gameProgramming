@@ -49,6 +49,10 @@ public class Faction : MonoBehaviour
     private Transform startPosition; //start position for Faction
     public Transform StartPosition { get { return startPosition; } }
     
+    //range for worker to find new resource เพิ่มระยะค้นหา
+    [SerializeField]
+    private int newResourceRange = 50; 
+    
     
     // Start is called before the first frame update
     void Start()
@@ -152,5 +156,44 @@ public class Faction : MonoBehaviour
 
         if (this == GameManager.instance.MyFaction)
             MainUI.instance.UpdateAllResource(this);
+    }
+    
+    // gets the closest resource to the position (random between nearest 3 for some variance)
+    public ResourceSource GetClosestResource(Vector3 pos, ResourceType rType)
+    {
+        ResourceSource[] closest = new ResourceSource[2];
+        float[] closestDist = new float[2];
+
+        foreach (ResourceSource resource in ResourceManager.instance.Resources)
+        {
+            if (resource == null)
+                continue;
+
+            if (resource.RsrcType == rType)
+            {
+                float dist = Vector3.Distance(pos, resource.transform.position);
+
+                if (dist <= newResourceRange)
+                {
+                    for (int x = 0; x < closest.Length; x++)
+                    {
+                        if (closest[x] == null)
+                        {
+                            closest[x] = resource;
+                            closestDist[x] = dist;
+                            break;
+                        }
+                        else if (dist < closestDist[x])
+                        {
+                            closest[x] = resource;
+                            closestDist[x] = dist;
+                            break;
+                        }
+
+                    }
+                }
+            }
+        }
+        return closest[UnityEngine.Random.Range(0, closest.Length)];
     }
 }
