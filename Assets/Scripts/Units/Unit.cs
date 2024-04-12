@@ -10,6 +10,10 @@ public enum UnitState
     Attack,
     MoveToBuild,
     BuildProgress,
+    MoveToResource,
+    Gather, //worker gather resource
+    DeliverToHQ, // worker come back
+    StoreAtHQ, // give to HQ
     Die
 }
 
