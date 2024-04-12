@@ -46,6 +46,9 @@ public class Worker : MonoBehaviour
             case UnitState.Gather:
                 GatherUpdate();
                 break;
+            case UnitState.DeliverToHQ:
+                DeliverToHQUpdate();
+                break;
         }
     }
     
@@ -98,5 +101,19 @@ public class Worker : MonoBehaviour
             else //amount is full, go back to deliver at HQ
                 unit.SetState(UnitState.DeliverToHQ);
         }
+    }
+    
+    private void DeliverToHQUpdate()
+    {
+        if (Time.time - unit.LastPathUpdateTime > unit.PathUpdateRate)
+        {
+            unit.LastPathUpdateTime = Time.time;
+
+            unit.NavAgent.SetDestination(unit.Faction.GetHQSpawnPos());
+            unit.NavAgent.isStopped = false;
+        }
+
+        if (Vector3.Distance(transform.position, unit.Faction.GetHQSpawnPos()) <= 1.6f)
+            unit.SetState(UnitState.StoreAtHQ);
     }
 }

@@ -92,6 +92,15 @@ public class Unit : MonoBehaviour
     [SerializeField] private Worker worker;
     public Worker Worker { get { return worker; } }
     
+    // Path Update
+    [SerializeField]
+    private float pathUpdateRate = 1.0f;
+    public float PathUpdateRate { get { return pathUpdateRate; } }
+
+    [SerializeField]
+    private float lastPathUpdateTime;
+    public float LastPathUpdateTime { get { return lastPathUpdateTime; } set { lastPathUpdateTime = value; } }
+    
     void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();

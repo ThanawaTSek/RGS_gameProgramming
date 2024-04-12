@@ -31,6 +31,10 @@ public class Faction : MonoBehaviour
     [SerializeField] private List<Unit> aliveUnits = new List<Unit>();
     public List<Unit> AliveUnits { get { return aliveUnits; } }
     
+    //ตัวแปร List ของ Building
+    [SerializeField] private List<Building> aliveBuildings = new List<Building>();
+    public List<Building> AliveBuildings { get { return aliveBuildings; } }
+    
     [SerializeField] private Transform unitsParent;
     public Transform UnitsParent { get { return unitsParent; } }
 
@@ -40,9 +44,10 @@ public class Faction : MonoBehaviour
     [SerializeField] private Transform ghostBuildingParent;
     public Transform GhostBuildingParent { get { return ghostBuildingParent; } }
     
-    //ตัวแปร List ของ Building
-    [SerializeField] private List<Building> aliveBuildings = new List<Building>();
-    public List<Building> AliveBuildings { get { return aliveBuildings; } }
+    //จุดศูนย์กลางฝ่าย Faction นี้
+    [SerializeField]
+    private Transform startPosition; //start position for Faction
+    public Transform StartPosition { get { return startPosition; } }
     
     
     // Start is called before the first frame update
@@ -116,4 +121,14 @@ public class Faction : MonoBehaviour
         gold -= building.StructureCost.gold;
         stone -= building.StructureCost.stone;
     } // เช็คและหัก BuildingCost
+    
+    public Vector3 GetHQSpawnPos()
+    {
+        foreach (Building b in aliveBuildings)
+        {
+            if (b.IsHQ)
+                return b.SpawnPoint.position;
+        }
+        return startPosition.position;
+    }
 }
