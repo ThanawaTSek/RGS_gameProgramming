@@ -5,14 +5,14 @@ using UnityEngine;
 public class ResourceManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] woodTreePrefab;
-
-    [SerializeField]
-    private Transform woodTreeParent;
-
-    [SerializeField]
     private ResourceSource[] resources;
     public ResourceSource[] Resources { get { return resources; } }
+    
+    [SerializeField] private GameObject[] woodTreePrefab;
+    [SerializeField] private Transform woodTreeParent;
+    [SerializeField] private Transform foodTreeParent;
+
+    
 
     public static ResourceManager instance;
 
