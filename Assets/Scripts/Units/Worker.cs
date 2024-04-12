@@ -38,7 +38,12 @@ public class Worker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        switch (unit.State)
+        {
+            case UnitState.MoveToResource:
+                MoveToResourceUpdate();
+                break;
+        }
     }
     
     public void ToGatherResource(ResourceSource resource, Vector3 pos)
@@ -57,4 +62,17 @@ public class Worker : MonoBehaviour
         unit.NavAgent.isStopped = false;
         unit.NavAgent.SetDestination(pos);
     } // move to a resource and begin to gather it
+    
+    private void MoveToResourceUpdate()
+    {
+        if (Vector3.Distance(transform.position, unit.NavAgent.destination) <= 2f)
+        {
+            if (curResourceSource != null)
+            {
+                unit.LookAt(curResourceSource.transform.position);
+                unit.NavAgent.isStopped = true;
+                unit.SetState(UnitState.Gather);
+            }
+        }
+    } // MoveToResourceUpdate
 }
