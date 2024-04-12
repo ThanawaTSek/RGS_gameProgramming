@@ -26,6 +26,7 @@ public class UnitAnimation : MonoBehaviour
         anim.SetBool("IsMove", false);
         anim.SetBool("IsAttack", false);
         anim.SetBool("IsBuild", false);
+        anim.SetBool("IsWorker", false);
 
         switch (u.State)
         {
@@ -44,6 +45,19 @@ public class UnitAnimation : MonoBehaviour
             case UnitState.BuildProgress:
                 anim.SetBool("IsBuild", true);
                 break;
+            case UnitState.MoveToResource:
+                anim.SetBool("IsMove", true);
+                break;
+            case UnitState.Gather:
+                anim.SetBool("IsWorker", true);
+                break;
+            case UnitState.DeliverToHQ:
+                anim.SetBool("IsMove", true);
+                break;
+            case UnitState.StoreAtHQ:
+                anim.SetBool("IsIdle", true);
+                break;
+                
         }
     } // เพิ่มเมธอดในการจัดการอนิเมชั่น
 }

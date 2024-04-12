@@ -131,4 +131,26 @@ public class Faction : MonoBehaviour
         }
         return startPosition.position;
     }
+    
+    public void GainResource(ResourceType resourceType, int amount)
+    {
+        switch (resourceType)
+        {
+            case ResourceType.Food:
+                food += amount;
+                break;
+            case ResourceType.Wood:
+                wood += amount;
+                break;
+            case ResourceType.Gold:
+                gold += amount;
+                break;
+            case ResourceType.Stone:
+                stone += amount;
+                break;
+        }
+
+        if (this == GameManager.instance.MyFaction)
+            MainUI.instance.UpdateAllResource(this);
+    }
 }

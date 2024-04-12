@@ -49,6 +49,9 @@ public class Worker : MonoBehaviour
             case UnitState.DeliverToHQ:
                 DeliverToHQUpdate();
                 break;
+            case UnitState.StoreAtHQ:
+                StoreAtHQUpdate();
+                break;
         }
     }
     
@@ -113,7 +116,21 @@ public class Worker : MonoBehaviour
             unit.NavAgent.isStopped = false;
         }
 
-        if (Vector3.Distance(transform.position, unit.Faction.GetHQSpawnPos()) <= 1.6f)
+        if (Vector3.Distance(transform.position, unit.Faction.GetHQSpawnPos()) <= 3f)
             unit.SetState(UnitState.StoreAtHQ);
+    }
+    
+    private void StoreAtHQUpdate()
+    {
+        unit.LookAt(unit.Faction.GetHQSpawnPos());
+
+        if (amountCarry > 0)
+        {
+            // Deliver the resource to Faction
+            unit.Faction.GainResource(carryType, amountCarry);
+            amountCarry = 0;
+
+            //Debug.Log("Delivered");
+        }
     }
 }
