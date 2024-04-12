@@ -43,6 +43,9 @@ public class Worker : MonoBehaviour
             case UnitState.MoveToResource:
                 MoveToResourceUpdate();
                 break;
+            case UnitState.Gather:
+                GatherUpdate();
+                break;
         }
     }
     
@@ -75,4 +78,25 @@ public class Worker : MonoBehaviour
             }
         }
     } // MoveToResourceUpdate
+    
+    private void GatherUpdate()
+    {
+        if (Time.time - lastGatherTime > gatherRate)
+        {
+            lastGatherTime = Time.time;
+
+            if (amountCarry < maxCarry)
+            {
+                if (curResourceSource != null)
+                {
+                    curResourceSource.GatherResource(gatherAmount);
+
+                    carryType = curResourceSource.RsrcType;
+                    amountCarry += gatherAmount;
+                }
+            }
+            else //amount is full, go back to deliver at HQ
+                unit.SetState(UnitState.DeliverToHQ);
+        }
+    }
 }
