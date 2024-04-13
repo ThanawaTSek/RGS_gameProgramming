@@ -108,4 +108,13 @@ public class InfoManager : MonoBehaviour
         hpIcon.color = Color.white;
         hpTxt.text = $"{unit.CurHP}/{unit.MaxHP}";
     } // ShowEnemyUnit
+    
+    public void ShowEnemyAllInfo(Building b)
+    {
+        SetPic(b.StructurePic);
+        nameTxt.text = b.StructureName;
+
+        hpIcon.color = Color.white;
+        hpTxt.text = $"{b.CurHP}/{b.MaxHP}";
+    } // แสดง Info ของ Building ที่ไม่ใช่ของเรา
 }
