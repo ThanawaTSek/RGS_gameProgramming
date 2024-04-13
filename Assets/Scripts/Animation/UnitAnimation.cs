@@ -27,6 +27,7 @@ public class UnitAnimation : MonoBehaviour
         anim.SetBool("IsAttack", false);
         anim.SetBool("IsBuild", false);
         anim.SetBool("IsWorker", false);
+        anim.SetBool("IsDeath", false);
 
         switch (u.State)
         {
@@ -56,6 +57,9 @@ public class UnitAnimation : MonoBehaviour
                 break;
             case UnitState.StoreAtHQ:
                 anim.SetBool("IsIdle", true);
+                break;
+            case UnitState.Die:
+                anim.SetBool("IsDeath", true);
                 break;
                 
         }
