@@ -5143,7 +5143,7 @@ GameObject:
   - component: {fileID: -4061521662593627663}
   - component: {fileID: -4134747315748055507}
   m_Layer: 6
-  m_Name: Soldier
+  m_Name: BritishSoldier
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
