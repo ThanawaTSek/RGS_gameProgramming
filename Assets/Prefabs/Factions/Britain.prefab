@@ -173,13 +173,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nation: 1
-  food: 0
+  food: 300
   wood: 0
-  gold: 0
+  gold: 180
   stone: 0
   aliveUnits: []
+  aliveBuildings: []
   unitsParent: {fileID: 7973080303194270649}
   buildingsParent: {fileID: 3041623831167383882}
   ghostBuildingParent: {fileID: 4579430950005795928}
-  aliveBuildings: []
   startPosition: {fileID: 6380286047650144035}
+  newResourceRange: 50
