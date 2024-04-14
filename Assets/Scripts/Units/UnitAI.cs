@@ -74,7 +74,8 @@ public class UnitAI : MonoBehaviour
     
     protected void Check()
     {
-        if (unit.CurHP <= 0) return;
+        if (unit.CurHP <= 0 || unit.State == UnitState.Die) 
+            return;
         
         if (!unit.IsWorker && !unit.IsBuilder)// if a unit is a fighter
         {
