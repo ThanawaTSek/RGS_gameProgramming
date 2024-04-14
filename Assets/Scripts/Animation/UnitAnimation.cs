@@ -61,6 +61,9 @@ public class UnitAnimation : MonoBehaviour
             case UnitState.Die:
                 anim.SetBool("IsDeath", true);
                 break;
+            case UnitState.AttackBuilding:
+                anim.SetBool("IsAttack", true);
+                break;
                 
         }
     } // เพิ่มเมธอดในการจัดการอนิเมชั่น
